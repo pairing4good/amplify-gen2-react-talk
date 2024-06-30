@@ -5,6 +5,10 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    host: true,
+    port: 3000,
+  },
   test: {
     // 👋 add the line below to add jsdom to vite
     environment: 'jsdom',
