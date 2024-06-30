@@ -26,7 +26,7 @@ test:
         - npm install -g pm2
         - npm install -g wait-on
         - npm install mocha mochawesome mochawesome-merge mochawesome-report-generator
-        - pm2 start npm -- dev
+        - pm2 start npm -- start
         - wait-on http://localhost:3000
     test:
       commands:
