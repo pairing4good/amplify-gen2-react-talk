@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
+import { StorageManager } from '@aws-amplify/ui-react-storage';
 
 const client = generateClient<Schema>();
 
@@ -33,6 +34,12 @@ function App() {
           Review next step of this tutorial.
         </a>
       </div>
+      <StorageManager
+          acceptedFileTypes={['image/*']}
+          path="picture-submissions/"
+          maxFileCount={1}
+          isResumable
+        />
     </main>
   );
 }
