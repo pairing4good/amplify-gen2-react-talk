@@ -12,7 +12,7 @@ function App() {
         <Button variation="link" onClick={signOut} size="small">Sign out</Button>
       </p>
       <Divider orientation="horizontal" />
-      <Todo user={user} signOut={signOut}/>
+      <Todo/>
     </main>
       )}
     </Authenticator>

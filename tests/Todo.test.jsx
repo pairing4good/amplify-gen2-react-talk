@@ -16,12 +16,7 @@ vi.mock('aws-amplify/data', () => ({
 
 describe('Todo', () => {
   it('renders the App component', () => {
-    const testProps = {
-      user: 'test',
-      signOut: () => {}
-    };
-
-    render(<Todo {...testProps}/>)
+    render(<Todo/>)
     
     const heading = screen.getByRole('heading', { level: 1 })
  

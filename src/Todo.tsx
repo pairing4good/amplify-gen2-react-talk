@@ -6,7 +6,7 @@ import '@aws-amplify/ui-react/styles.css';
 
 const client = generateClient<Schema>();
 
-function Todo(props: { user: any; signOut: any; }) {
+function Todo() {
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   useEffect(() => {
@@ -21,11 +21,6 @@ function Todo(props: { user: any; signOut: any; }) {
 
   return (
     <>
-      <p>{props.user?.signInDetails?.loginId}'s todos 
-        <Button variation="link" onClick={props.signOut} size="small">Sign out</Button>
-      </p>
-      <Divider orientation="horizontal" />
-
       <h1>My todos</h1>
       <button onClick={createTodo}>+ new</button>
       <ul>
