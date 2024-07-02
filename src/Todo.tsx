@@ -6,7 +6,7 @@ import '@aws-amplify/ui-react/styles.css';
 
 const client = generateClient<Schema>();
 
-function Todo(props) {
+function Todo(props: { user: any; signOut: any; }) {
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   useEffect(() => {

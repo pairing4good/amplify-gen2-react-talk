@@ -1,6 +1,6 @@
 import { Authenticator, Button, Divider } from "@aws-amplify/ui-react";
 import '@aws-amplify/ui-react/styles.css';
-import Todo from "./ToDo";
+import Todo from "./Todo";
 
 function App() {
 
