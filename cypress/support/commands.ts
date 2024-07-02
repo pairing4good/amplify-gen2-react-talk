@@ -1,4 +1,18 @@
 /// <reference types="cypress" />
+
+import { Amplify } from 'aws-amplify';
+import { signIn } from 'aws-amplify/auth';
+
+import outputs from "../../amplify_outputs.json";
+ 
+ Amplify.configure(outputs);
+ 
+ Cypress.Commands.add('authenticate', async (user:string) => {
+   return await signIn({
+    username: user + '@gmail.com',
+    password: 'P@ssw0rd',
+  });
+ })
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
