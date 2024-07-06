@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
-import '@aws-amplify/ui-react/styles.css';
+import "@aws-amplify/ui-react/styles.css";
 
 const client = generateClient<Schema>();
 
@@ -52,21 +52,21 @@ function App() {
         </a>
       </div>
 
-      <h1 className="text-3xl font-bold text-center mb-4">Haiku Generator</h1>
+      <h2 className="text-3xl font-bold text-center mb-4">Haiku Generator</h2>
 
-        <form className="mb-4 self-center max-w-[500px]" onSubmit={sendPrompt}>
-          <input
-            className="text-black p-2 w-full"
-            placeholder="Enter a prompt..."
-            name="prompt"
-            value={prompt}
-            onChange={(e) => setPrompt(e.target.value)}
-          />
-        </form>
+      <form className="mb-4 self-center max-w-[500px]" onSubmit={sendPrompt}>
+        <input
+          className="text-black p-2 w-full"
+          placeholder="Enter a prompt..."
+          name="prompt"
+          value={prompt}
+          onChange={(e) => setPrompt(e.target.value)}
+        />
+      </form>
 
-        <div className="text-center">
-          <pre>{answer}</pre>
-        </div>
+      <div className="text-center">
+        <pre>{answer}</pre>
+      </div>
     </main>
   );
 }
